@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtsoiid"
+            android:layout_weight="1"
+            android:text="SOI ID :3568"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date and time : May 20th (Fri)"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:id="@+id/txtdatetime"
+            tools:ignore="HardcodedText" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview"
+        android:elevation="4dp"
+        tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="25dp"
+        android:src="@drawable/search"
+        app:backgroundTint="@color/orange_dark"
+        app:borderWidth="1dp"
+        app:elevation="4dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.design.widget.CoordinatorLayout>

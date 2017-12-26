@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+
+
+    <!--Splash Theme-->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+
+   <!-- &lt;!&ndash;<<<<Rating Bar>>>>>&ndash;&gt;
+        <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingstars</item>
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
+    </style>-->
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/food_rating_bar_full</item>
+        <!--<item name="android:minHeight">23dip</item>
+        <item name="android:maxHeight">25dip</item>-->
+    </style>
+
+
+    <!--Login Theme-->
+    <style name="Login" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/orange_dark</item>
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">#ffffff</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <!--<<<Dialog them>>>>-->
+    <style name="ThemeDialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowEnterAnimation">@anim/dialog_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_down</item>
+    </style>
+
+    <!--Material Dialog Theme-->
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+
+
+    <style name="AppTheme.ActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

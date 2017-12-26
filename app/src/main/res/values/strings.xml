@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Sample</string>
+
+
+    <!--<!SystemHeathoard paramter &ndash;&gt;-->
+    <string name="btn_paramterAlert">Paramter Alert</string>
+    <string name="btn_paramterStoreAlert">Store Alert</string>
+    <string name="action_message"> Paramter with this color indicates your attention is required immediately.</string>
+
+
+    <!--//dashBoard String Decleartion-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="alert_title">alert</string>
+
+    <!--///Login and splash screen -->
+    <string name="actihygene_logo">ActiHygiene</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="copyrightmessage">\u00A9 Securence 2017. Lience to The Beercafe.Version 1.0</string>
+    <string name="username">User ID</string>
+    <string name="Password">Password</string>
+    <string name="rateyourapplication">Rate our application</string>
+
+    <!--<<<<<<Fragment Name>>>>>>-->
+    <string name="fragment_feedback">Feedback</string>
+    <string name="frament_settings">Setting</string>
+
+    <!--<<<<<<Rating Status>>>>>>>>>>-->
+    <string name="one_star">It was poor</string>
+    <string name="two_star">It was ok</string>
+    <string name="three_star">It was Avarage</string>
+    <string name="four_star">It was Good</string>
+    <string name="five_star">It was Awesome</string>
+    <string name="str_location"><font color='black'>Location :</font> 702-A , 7th Floor, Symphony IT Park , Plot No.1 Chandiwali, off Raheja vihar road , behind chandiwali ice factory, mumbai - 400072 india.</string>
+
+
+    <!--<<<<<<<<<Menu Item >>>>>>>>-->
+    <string name="menu_item_lastupdate"><font color='black'>Last Updated</font> \n <font color='red'>11.30 AM</font></string>
+    <string name="other_queued_videos">Other Queued Videos</string>
+    <string name="other_queued_audios">Other Queued Audios</string>
+    <string name="search_by_sol_id">Search By Sol Id</string>
+    <string name="submit">SUBMIT</string>
+
+    <!--<string name="menu_item_lastupdate">Last Updated \n ![CDATA[<b><font color=#FF0000>Hello world!</font></b>]]</string>-->
+
+
+
+</resources>

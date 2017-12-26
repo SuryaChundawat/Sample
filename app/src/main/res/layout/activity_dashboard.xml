@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="4dp"
+        tools:ignore="MissingConstraints,UselessLeaf"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="86dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap_round"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnParamterAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shap_round_color"
+                    android:text="@string/btn_paramterAlert"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnStoreAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/btn_paramterStoreAlert"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap_dotted"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_message"
+                android:textColor="@color/red_dark"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="4dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="4dp"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="25dp"
+        android:src="@drawable/calender"
+        app:backgroundTint="@color/orange_dark"
+        app:borderWidth="1dp"
+        app:elevation="4dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>

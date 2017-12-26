@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e5e5e5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!--//This is from the navigation header view -->
+    <color name="group_divider_color">#80CBC4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="gray_balck">#FF494848</color>
+
+    <color name="lime">#E6EE9C</color>
+    <color name="orange">#FFCC80</color>
+    <color name="grey">#B0BEC5</color>
+    <color name="purple">#B39DDB</color>
+    <color name="pink">#F48FB1</color>
+
+    <!--//Transparent Colour -->
+    <color name="transparent_background">#0000</color>
+    <color name="orange_dark">#FF7217</color>
+    <color name="red_dark">#C70039</color>
+    <color name="light">#FFEEEEEE</color>
+    
+    <!--<<<Colour Founts>>>>>-->
+    <color name="transparent_orange">#fac8b2</color>
+
+
+
+</resources>

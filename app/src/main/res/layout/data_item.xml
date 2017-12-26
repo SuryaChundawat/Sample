@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="48dp"
+    android:padding="6dp"
+    android:layout_width="match_parent">
+
+   <ImageView
+       android:layout_width="40dp"
+       android:layout_height="40dp"
+       android:id="@+id/imageicon"
+       android:layout_marginLeft="8dp"
+       tools:ignore="ContentDescription,RtlHardcoded"
+       android:layout_marginRight="4dp"
+       />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="left|center_vertical"
+        android:layout_toLeftOf="@+id/dataItemArrow"
+        android:layout_toRightOf="@+id/imageicon"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/dataItemName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dataItemArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/add"
+        style="@style/Widget.AppCompat.DrawerArrowToggle"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+</RelativeLayout>

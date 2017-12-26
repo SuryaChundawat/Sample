@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@drawable/navigationbackground"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.suryanarayan.sample.circleimageview.CircleImageView
+            android:id="@+id/Image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/spic"
+            app:civ_border_color="@color/light"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_toEndOf="@+id/Image_view"
+            android:layout_toRightOf="@+id/Image_view"
+            android:text="John Doe" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:id="@+id/linearLayout">
+
+            <Spinner
+                android:id="@+id/useremail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="android.studio@android.com" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--   <advice_natio.project.com.getmoney.circleimageview.CircleImageView
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:id="@+id/Image_view"
+           android:src="@drawable/spic"
+           android:layout_marginLeft="10dp"
+           app:civ_border_width="2dp"
+           app:civ_border_color="@color/light" />
+    &lt;!&ndash;   <ImageView
+           android:id="@+id/imageView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/spic"
+           android:paddingTop="@dimen/nav_header_vertical_spacing"
+           />&ndash;&gt;
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/nav_username"
+           android:paddingTop="@dimen/nav_header_vertical_spacing"
+           android:text="User Name"
+           android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+       <TextView
+           android:id="@+id/nav_irid"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="android.studio@android.com" />-->
+
+</LinearLayout>

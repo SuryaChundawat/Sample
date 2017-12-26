@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/SelectRegion"
+            android:icon="@drawable/select_region"
+            android:title="Select Region"
+            />
+        <item
+            android:id="@+id/Dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/LiveSiteReview"
+            android:icon="@drawable/live_site_review"
+            android:title="Live Site Review" />
+        <item
+            android:id="@+id/ServiceRequest"
+            android:icon="@drawable/service_request"
+            android:title="Service Request" />
+        <item
+            android:id="@+id/SystemHealth"
+            android:icon="@drawable/system_health"
+            android:title="System Health" />
+
+    </group>
+
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/Setting"
+                android:title="Setting"
+                />
+
+            <item
+                android:id="@+id/feedback"
+                android:title="Feedback"
+                />
+        </menu>
+
+
+    </item>
+
+
+
+
+
+</menu>
