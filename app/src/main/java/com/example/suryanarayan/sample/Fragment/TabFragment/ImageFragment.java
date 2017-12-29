@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.suryanarayan.sample.Activity.Activity_searchimage;
 import com.example.suryanarayan.sample.Adapter.Adapter_Image;
 import com.example.suryanarayan.sample.Fragment.ServiceRequest;
 import com.example.suryanarayan.sample.Modal.ImageParameter;
@@ -31,17 +32,11 @@ public class ImageFragment extends Fragment implements View.OnClickListener
 {
     private RecyclerView Listview;
     private TextView txtSoiId,txtDatetime;
-    private ArrayList<ImageParameter> list;
+    public static ArrayList<ImageParameter> list;
     private Context context;
     private Adapter_Image mAdapter;
     private String KEY_ADAPTER_STATE="ImageParameter";
     private FloatingActionButton fab;
-
-    //Testing Url for the image showing
-//    http://placehold.it/120x120&text=image1
-//    http://placehold.it/120x120&text=image2
-//    http://placehold.it/120x120&text=image3
-//    http://placehold.it/120x120&text=image4
 
     public ImageFragment()
     {
@@ -57,9 +52,6 @@ public class ImageFragment extends Fragment implements View.OnClickListener
             list = mAdapter.onSaveInstanceState();
         }
 
-        //However, remember that this method is called when the device is rotated even if your fragment is on the back stack.
-        //In such cases, the onCreateView was not called, hence there is nothing to save.
-        //Hence, we just re-save the state that we had retrieved in onCreate. We sort of relay the state from onCreate to onSaveInstanceState.
         outState.putParcelableArrayList(KEY_ADAPTER_STATE, list);
     }
 
@@ -120,15 +112,14 @@ public class ImageFragment extends Fragment implements View.OnClickListener
     }
 
     private void Loaddata() {
-
         ImageParameter imp;
-        imp = new ImageParameter("Camera 23","13:56","http://placehold.it/120x120&text=image1");
+        imp = new ImageParameter("Camera 23","13:56","http://placehold.it/120x120&text=image1","124578","12/05/2017","702-A , 7th Floor, Symphony IT Park , Plot No.1 Chandiwali, off Raheja vihar road , behind chandiwali ice factory, mumbai - 400072 india.");
         list.add(imp);
-        imp = new ImageParameter("Camera 85","07:14","http://placehold.it/120x120&text=image2");
+        imp = new ImageParameter("Camera 85","07:14","http://placehold.it/120x120&text=image2","789456","12/05/2017","702-A , 7th Floor, Symphony IT Park , Plot No.1 Chandiwali, off Raheja vihar road , behind chandiwali ice factory, mumbai - 400072 india.");
         list.add(imp);
-        imp = new ImageParameter("Camera 15","19:46","http://placehold.it/120x120&text=image3");
+        imp = new ImageParameter("Camera 15","19:46","http://placehold.it/120x120&text=image3","958745","12/05/2017","702-A , 7th Floor, Symphony IT Park , Plot No.1 Chandiwali, off Raheja vihar road , behind chandiwali ice factory, mumbai - 400072 india.");
         list.add(imp);
-        imp = new ImageParameter("Camera 9","9:01","http://placehold.it/120x120&text=image4");
+        imp = new ImageParameter("Camera 9","9:01","http://placehold.it/120x120&text=image4","632541","12/05/2017","702-A , 7th Floor, Symphony IT Park , Plot No.1 Chandiwali, off Raheja vihar road , behind chandiwali ice factory, mumbai - 400072 india.");
         list.add(imp);
 
         mAdapter = new Adapter_Image(list,context);
@@ -168,9 +159,12 @@ public class ImageFragment extends Fragment implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if (view == fab) {
-            Toast.makeText(context, "Fab is clicked", Toast.LENGTH_SHORT).show();
-
+            Intent intent = new Intent(context,Activity_searchimage.class);
+            Bundle bundle = new Bundle();
+            bundle.putParcelableArrayList("imageresources", list);
+            bundle.putInt("id",1);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
-
     }
 }

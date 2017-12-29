@@ -1,22 +1,32 @@
 package com.example.suryanarayan.sample.Fragment.TabFragment;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.suryanarayan.sample.Activity.Activity_searchimage;
 import com.example.suryanarayan.sample.Adapter.Adapter_audio;
 import com.example.suryanarayan.sample.Adapter.Adapter_vedio;
+import com.example.suryanarayan.sample.BaseClass.Utils;
 import com.example.suryanarayan.sample.Modal.VedioParameter;
 import com.example.suryanarayan.sample.R;
 import com.github.clans.fab.FloatingActionButton;
@@ -40,6 +50,13 @@ public class AudioFragment extends Fragment implements View.OnClickListener
     private FloatingActionMenu floatingActionMenu;
     private FloatingActionButton fabSearch,fabRequestaudio;
 
+    //Remebering Points for the Implementation
+    // 1. Used the same list for searching the elements fro activity_searchimage.
+    // 2. Need make the different activity as well for while the original data while arriveing .
+    // 3. Need to the implement different adapter as for the searching the elements for the searching.
+
+
+
     public AudioFragment()
     {
 
@@ -62,7 +79,7 @@ public class AudioFragment extends Fragment implements View.OnClickListener
 
             //When we go to next fragment and return back here, the adapter is already present and populated.
             //Don't create it again in such cases. Hence the null check.
-            if(mAdapter == null){
+            if(mAdapter == null) {
                 Loaddata();
             }
 
@@ -112,27 +129,23 @@ public class AudioFragment extends Fragment implements View.OnClickListener
             fabRequestaudio.setOnClickListener(this);
             fabSearch.setOnClickListener(this);
             list = new ArrayList<>();
+            Loaddata();
             InitilizeFab();
         }
 
 
-        private void InitilizeFab()
-        {
+        private void InitilizeFab() {
             floatingActionMenu.setIconAnimated(false);
             floatingActionMenu.setClosedOnTouchOutside(false);
-            //floatingActionMenu.hideMenuButton(false);
-            /*floatingActionMenu.setClosedOnTouchOutside(true);
-            floatingActionMenu.hideMenuButton(false);*/
-
-
-
-
         }
 
 
 
-        private void Loaddata() {
 
+
+
+
+        private void Loaddata() {
             VedioParameter imp;
             imp = new VedioParameter("4578","20th Jan 2016","10.15 AM","20th Jan 2016,10.15 AM","4 Days","On demand",getString(R.string.str_location));
             list.add(imp);
@@ -177,6 +190,16 @@ public class AudioFragment extends Fragment implements View.OnClickListener
     public void onClick(View view) {
             if (view == fabRequestaudio) {
                 Toast.makeText(context,"Fab is clicked",Toast.LENGTH_LONG).show();
+            }
+            if(view == fabSearch)
+            {
+                Intent intent = new Intent(context,Activity_searchimage.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("imageresources", ImageFragment.list);
+                bundle.putInt("id",2);
+                intent.putExtras(bundle);
+                startActivity(intent);
+
             }
 
     }

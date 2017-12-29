@@ -3,10 +3,13 @@ package com.example.suryanarayan.sample.Activity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -70,6 +73,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,N
     private DrawerLayout drawer;
     private Handler mHandler;
     private TextView txtfeedback,txtsettings;
+    private int mSelectedItem;
 
 
 
@@ -317,7 +321,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,N
             public void onItemClicked(MultiLevelListView parent, View view, Object object, ItemInfo itemInfo)
             {
                 //int position = (int) view.getX();
-
+                //view.setBackgroundColor(getResources().getColor(R.color.transparent_orange));
                 StringBuilder builder = new StringBuilder("\"");
                 builder.append(((BaseItem) object).getName());
                 builder.append("\" clicked!\n");
@@ -332,6 +336,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,N
 
             }
         });
+
 
         listAdapter.setDataItems(CustomDataProvider.getInitialItems());
     }
@@ -386,8 +391,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,N
                 break;
 
             default:
-                loadHomeFragment(getString(R.string.app_name));
-                drawer.closeDrawer(GravityCompat.START);
+                /*loadHomeFragment(getString(R.string.app_name));
+                drawer.closeDrawer(GravityCompat.START);*/
                 break;
         }
 
@@ -469,6 +474,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,N
             LevelBeamView levelBeamView;
         }
 
+
         @Override
         public List<?> getSubObjects(Object object) {
             // DIEKSEKUSI SAAT KLIK PADA GROUP-ITEM
@@ -499,35 +505,35 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,N
             viewHolder.nameView.setText(((BaseItem) object).getName());
             String imagename = ((BaseItem) object).getName();
 
-            int servicerequest = R.drawable.service_request;
-            int dashboard = R.drawable.dashboard;
-            int livesitereview = R.drawable.live_site_review;
-            int systemhealth = R.drawable.system_health;
-            int selectregion = R.drawable.select_region;
+            int servicerequest = R.mipmap.service_request;
+            int dashboard = R.mipmap.dashboard;
+            int livesitereview = R.mipmap.live_site_review;
+            int systemhealth = R.mipmap.system_health;
+            int selectregion = R.mipmap.select_region;
             if (imagename.equals("Select Region"))
             {
                 viewHolder.iconimage.setVisibility(View.VISIBLE);
-                viewHolder.iconimage.setImageResource(R.drawable.select_region);
+                viewHolder.iconimage.setImageResource(R.mipmap.select_region);
             }
             if (imagename.equals("DashBoard"))
             {
                 viewHolder.iconimage.setVisibility(View.VISIBLE);
-                viewHolder.iconimage.setImageResource(R.drawable.dashboard);
+                viewHolder.iconimage.setImageResource(R.mipmap.dashboard);
             }
             if (imagename.equals("Live Site Review"))
             {
                 viewHolder.iconimage.setVisibility(View.VISIBLE);
-                viewHolder.iconimage.setImageResource(R.drawable.live_site_review);
+                viewHolder.iconimage.setImageResource(R.mipmap.live_site_review);
             }
             if (imagename.equals("Service Request"))
             {
                 viewHolder.iconimage.setVisibility(View.VISIBLE);
-                viewHolder.iconimage.setImageResource(R.drawable.service_request);
+                viewHolder.iconimage.setImageResource(R.mipmap.service_request);
             }
             if (imagename.equals("System Health"))
             {
                 viewHolder.iconimage.setVisibility(View.VISIBLE);
-                viewHolder.iconimage.setImageResource(R.drawable.system_health);
+                viewHolder.iconimage.setImageResource(R.mipmap.system_health);
             }
 
             if (imagename.equals("All"))
@@ -563,7 +569,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,N
             if (itemInfo.isExpandable()) {
                 viewHolder.arrowView.setVisibility(View.VISIBLE);
                 viewHolder.arrowView.setImageResource(itemInfo.isExpanded() ?
-                        R.drawable.minus : R.drawable.add);
+                        R.mipmap.minus : R.mipmap.add);
             } else {
                 viewHolder.arrowView.setVisibility(View.GONE);
                 //viewHolder.iconimage.setVisibility(View.GONE);

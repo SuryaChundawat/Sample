@@ -24,7 +24,8 @@
             android:background="@drawable/shap_round"
             android:elevation="4dp"
             android:orientation="horizontal"
-            android:padding="4dp">
+            android:padding="4dp"
+            tools:ignore="UnusedAttribute">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -86,15 +87,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:padding="4dp">
+            >
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/listview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:elevation="4dp"
-                android:padding="4dp" />
+                tools:ignore="UnusedAttribute" />
 
         </LinearLayout>
 

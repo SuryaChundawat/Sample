@@ -12,14 +12,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="120dp"
             tools:ignore="UselessLeaf">
 
 
 
             <ImageView
-                android:layout_width="160dp"
-                android:layout_height="160dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/Image_view"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -39,57 +39,31 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="4dp"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/txtsolid"
                         android:text="Soi id"
+                        android:textSize="17dp"
                         />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:id="@+id/txtlocation"
                         android:text="Location is given"
                         />
-
-
 
                 </LinearLayout>
 
 
             </RelativeLayout>
 
-           <!-- <TextView
-                android:id="@+id/cameraposition"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="17dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="10dp"
-                android:text="Camera 1"
-                tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/txttime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="17dp"
-                android:layout_marginRight="17dp"
-                android:gravity="bottom|end"
-                android:text="11:12 AM"
-                tools:ignore="HardcodedText" />-->
 
 
 

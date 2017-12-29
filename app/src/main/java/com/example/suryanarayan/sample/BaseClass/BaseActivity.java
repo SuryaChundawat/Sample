@@ -1,5 +1,6 @@
 package com.example.suryanarayan.sample.BaseClass;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -23,14 +24,13 @@ import com.example.suryanarayan.sample.R;
  * Created by surya.narayan on 12/12/2017.
  */
 
+@SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity
 {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     public void InitiStatus() {

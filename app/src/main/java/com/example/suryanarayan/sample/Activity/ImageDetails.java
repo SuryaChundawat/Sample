@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.suryanarayan.sample.Adapter.Adapter_Image;
+import com.example.suryanarayan.sample.Adapter.Adapter_ImageSearch;
 import com.example.suryanarayan.sample.Adapter.Adpter_NextImage;
 import com.example.suryanarayan.sample.BaseClass.BaseActivity;
 import com.example.suryanarayan.sample.Modal.ImageParameter;
@@ -39,7 +40,9 @@ public class ImageDetails extends BaseActivity
     private Context context;
     private ProgressBar progressBar;
     private ArrayList<NextImageParameter> list;
+    private ArrayList<ImageParameter> listN;
     private CollapsingToolbarLayout collapsingToolbarLayout;
+    private int position;
 
 
 
@@ -51,6 +54,29 @@ public class ImageDetails extends BaseActivity
         context  = this;
         InitilizeView();
         setView ();
+        if (savedInstanceState == null) {
+            Bundle bundle = getIntent().getExtras();
+            assert bundle != null;
+            listN = bundle.getParcelableArrayList("imageresources");
+            position = bundle.getInt("Position");
+            assert listN != null;
+            String  imageurl = listN.get(position).getStrImagepath();
+            String  date = listN.get(position).getStrTime();
+            String location = listN.get(position).getStrLocation();
+            String  solid = listN.get(position).getStrSoiId();
+            String time = listN.get(position).getStrDateTime();
+            Glide
+                    .with(context)
+                    .load(imageurl)
+                    .placeholder(R.mipmap.kfc) // can also be a drawable
+                    .error(R.mipmap.kfc) // will be displayed if the image cannot be loaded
+                    .crossFade()
+                    .into(imageView);
+            txtLocation.setText(location.trim());
+            txtSoiID.setText(solid);
+            txtdate.setText(time);
+            //txttime.setText(date);
+        }
         Loadlist();
 
     }
@@ -64,6 +90,7 @@ public class ImageDetails extends BaseActivity
         txtSoiID = (TextView) findViewById(R.id.txtsoiid);
         txtdate = (TextView) findViewById(R.id.datetime);
         txtLocation = (TextView) findViewById(R.id.txtlocation);
+
         list = new ArrayList<>();
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
         collapsingToolbarLayout.setTitle("Service Request");

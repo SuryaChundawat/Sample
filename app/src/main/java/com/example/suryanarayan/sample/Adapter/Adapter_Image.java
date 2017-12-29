@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.CardView;
@@ -72,8 +73,11 @@ public class Adapter_Image extends RecyclerView.Adapter<Adapter_Image.MyViewHold
             public void onClick(View view) {
                 //String ProductList = gson.toJson(imageParametersList);
                 Intent intent = new Intent(context, ImageDetails.class);
-                //bundle.putParcelableArrayList("list", list);
-                intent.putExtra("position", position);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("imageresources", imageParametersList);
+                bundle.putInt("Position",position);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
                 ActivityOptionsCompat options = ActivityOptionsCompat.
                         makeSceneTransitionAnimation((Activity) context, holder.imageView,"product_image");
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {

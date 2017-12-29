@@ -19,11 +19,11 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.1"
             android:orientation="vertical"
             tools:ignore="InefficientWeight,ObsoleteLayoutParam,ScrollViewSize,UselessParent">
@@ -37,7 +37,7 @@
                 <RelativeLayout
                     android:id="@+id/login_border"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     tools:ignore="NotSibling"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
@@ -45,7 +45,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:orientation="vertical"
@@ -54,16 +54,15 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:padding="10dp"
                             >
 
                             <android.support.v7.widget.RecyclerView
                                 android:id="@+id/listview"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:nestedScrollingEnabled="true"
-                                android:layout_marginBottom="100dp"
                                 />
                         </RelativeLayout>
 

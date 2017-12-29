@@ -2,8 +2,13 @@ package com.example.suryanarayan.sample.Adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +26,10 @@ import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
 
@@ -61,40 +69,47 @@ public class Adapter_ParamterAlert extends RecyclerView.Adapter<Adapter_Paramter
         a= Float.valueOf(intvalue);
         b = Float.valueOf(remainvalue);
 
-        yvalues.add(new Entry(a, 1));
-        yvalues.add(new Entry(b, 2));
-        PieDataSet dataSet = new PieDataSet(yvalues, " ");
-
-        holder.pieChart.setCenterText("Alerts:"+"\n"+String.valueOf(yvalues.get(0).getVal()));
-        holder.pieChart.setCenterTextColor(Color.RED);
-        holder.pieChart.invalidate();
+        //Initilize Pie Chart for the use
         holder.pieChart.setUsePercentValues(true);
-        //holder.pieChart.getDescription().setEnabled(false);
+        holder.pieChart.getDescription().setEnabled(false);
         holder.pieChart.setExtraOffsets(5, 10, 5, 5);
         holder.pieChart.setDragDecelerationFrictionCoef(0.95f);
         holder.pieChart.setDrawHoleEnabled(true);
         holder.pieChart.setHoleColor(Color.WHITE);
-
+        holder.pieChart.setTransparentCircleColor(Color.WHITE);
+        holder.pieChart.setTransparentCircleAlpha(110);
+        holder.pieChart.setHoleRadius(58f);
+        holder.pieChart.setTransparentCircleRadius(61f);
+        holder.pieChart.setDrawCenterText(true);
+        holder.pieChart.setRotationAngle(0);
+        holder.pieChart.setRotationEnabled(false);
+        // enable rotation of the chart by touch
+        holder.pieChart.setHighlightPerTapEnabled(true);
         holder.pieChart.setTransparentCircleColor(Color.WHITE);
         holder.pieChart.setTransparentCircleAlpha(110);
 
         holder.pieChart.setHoleRadius(70f);
         holder.pieChart.setTransparentCircleRadius(61f);
-
         holder.pieChart.setDrawCenterText(true);
-
         holder.pieChart.setRotationAngle(0);
-        // enable rotation of the chart by touch
-        holder.pieChart.setRotationEnabled(true);
-        holder.pieChart.setHighlightPerTapEnabled(true);
 
-        // mChart.setUnit(" €");
-        // mChart.setDrawUnitsInChart(true);
+        setData(4, 100,holder,context,pr);
 
-        // add a selection listener
-        //holder.pieChart.setOnChartValueSelectedListener(context);
+        holder.pieChart.animateY(1400, Easing.EasingOption.EaseInOutQuad);
+        // holder.pieChart.spin(2000, 0, 360);
 
-        //setData(4, 100);
+        Legend l = holder.pieChart.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l.setDrawInside(false);
+        l.setXEntrySpace(7f);
+        l.setYEntrySpace(0f);
+        l.setYOffset(0f);
+        holder.pieChart.getLegend().setEnabled(false);
+        holder.pieChart.setEntryLabelColor(Color.WHITE);
+        holder.pieChart.setEntryLabelTextSize(12f);
+
 
         holder.pieChart.animateY(1400, Easing.EasingOption.EaseInOutQuad);
 
@@ -110,41 +125,7 @@ public class Adapter_ParamterAlert extends RecyclerView.Adapter<Adapter_Paramter
         holder.txtStore4value.setText(pr.getStoreFourvalue());
         holder.txtStore5.setText(pr.getStoreFive());
         holder.txtStore5value.setText(pr.getStoreFivevalue());
-       /* holder.pieChart.setEntryLabelColor(Color.WHITE);
-        holder.pieChart.setEntryLabelTypeface(mTfRegular);
-        holder.pieChart.setEntryLabelTextSize(12f);*/
 
-
-
-
-
-        ArrayList<String> xVals = new ArrayList<String>();
-
-        xVals.add(" ");
-        xVals.add(" ");
-        /*xVals.add("February");
-        xVals.add("March");
-        xVals.add("April");
-        xVals.add("May");
-        xVals.add("June");*/
-
-        PieData data = new PieData(xVals ,dataSet);
-        data.setValueTextColor(Color.WHITE);
-        //Default value
-        //data.setValueFormatter(new DefaultValueFormatter(0));
-        holder.pieChart.setData(data);
-
-        dataSet.setColors(new int[]{Color.RED});
-        dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
-
-
-
-        //holder.chkproduct.setText(pr.getProductname());
-        //String Amount = String.valueOf(pr.getProductAmount());
-        //holder.txtprice.setText(Amount);
-        //holder.imageView.setImageResource(pr.getQty());
-        //holder.imageView.setImageBitmap(Bitmap.createBitmap(pr.getQty()));
-       //Log.d("TAG Adpater", "prodct namme" + productList.get(position).getProductname() + "product amount" + productList.get(position).getProductAmount());
 
     }
 
@@ -176,10 +157,97 @@ public class Adapter_ParamterAlert extends RecyclerView.Adapter<Adapter_Paramter
             txtStore5value = (TextView) itemView.findViewById(R.id.txtparamter5);
             //imageView = (ImageView) itemView.findViewById(R.id.image_product);
             //txtprice = (AppCompatTextView) itemView.findViewById(R.id.txtprice);
-
-
         }
+    }
+
+    private void setData(int count, float range,MyViewHolder holder,Context context,ModalParamter pr) {
+
+        float mult = range;
+
+        ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
+
+        String value = pr.getAlertPercentage();
+        value = value.replaceAll("%","");
+        value = value.trim();
+        int intvalue = Integer.valueOf(value);
+        int remainvalue = 100-intvalue;
+        float a,b;
+        a= Float.valueOf(intvalue);
+        b = Float.valueOf(remainvalue);
+
+        entries.add(new PieEntry(a, 1));
+        entries.add(new PieEntry(b, 2));
+        holder.pieChart.setCenterText(generateCenterSpannableText(a));
 
 
+        // NOTE: The order of the entries when being added to the entries array determines their position around the center of
+        // the chart.
+       /* for (int i = 0; i < count ; i++) {
+            entries.add(new PieEntry((0),
+                    mParties[0],
+                    ""));
+        }*/
+
+        PieDataSet dataSet = new PieDataSet(entries, " ");
+        //dataSet.setDrawIcons(false);
+        dataSet.setSliceSpace(1f);
+        //dataSet.setIconsOffset(new MPPointF(0, 0));
+        dataSet.setSelectionShift(1f);
+
+        // add a lot of colors
+
+        ArrayList<Integer> colors = new ArrayList<Integer>();
+
+        /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.JOYFUL_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.COLORFUL_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.LIBERTY_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.PASTEL_COLORS)
+            colors.add(c);*/
+
+        colors.add(Color.RED);
+        colors.add(Color.parseColor("#eeeeee"));
+
+        dataSet.setColors(colors);
+        dataSet.setDrawValues(false);
+        dataSet.setDrawIcons(false);
+        //dataSet.setSelectionShift(0f);
+
+        PieData data = new PieData(dataSet);
+        data.setDrawValues(false);
+        /*data.setValueFormatter(new PercentFormatter());
+        data.setValueTextSize(11f);
+        data.setValueTextColor(Color.WHITE);*/
+        holder.pieChart.setData(data);
+
+        // undo all highlights
+        //holder.pieChart.highlightValues(null);
+
+        holder.pieChart.invalidate();
+    }
+
+    protected String[] mParties = new String[] {
+            /*"Party A", "Party B", "Party C", "Party D", "Party E", "Party F", "Party G", "Party H",
+            "Party I", "Party J", "Party K", "Party L", "Party M", "Party N", "Party O", "Party P",
+            "Party Q", "Party R", "Party S", "Party T", "Party U", "Party V", "Party W", "Party X",
+            "Party Y", "Party Z"*/
+    };
+
+    private SpannableString generateCenterSpannableText(float b) {
+
+        SpannableString s = new SpannableString("Alerts\n"+String.valueOf(b)+"%");
+        s.setSpan(new RelativeSizeSpan(1.0f), 0, s.length(), 0);
+        s.setSpan(new StyleSpan(Typeface.NORMAL), 0, s.length(), 0);
+        s.setSpan(new StyleSpan(Typeface.NORMAL), s.length() - 5, s.length(), 0);
+        s.setSpan(new ForegroundColorSpan(Color.RED), s.length() - 5, s.length(), 0);
+        return s;
     }
 }

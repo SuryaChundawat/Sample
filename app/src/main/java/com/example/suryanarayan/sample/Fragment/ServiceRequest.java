@@ -1,28 +1,36 @@
 package com.example.suryanarayan.sample.Fragment;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
+import android.widget.EditText;
 
+import com.example.suryanarayan.sample.BaseClass.Utils;
 import com.example.suryanarayan.sample.Fragment.TabFragment.AudioFragment;
 import com.example.suryanarayan.sample.Fragment.TabFragment.ImageFragment;
-import com.example.suryanarayan.sample.Fragment.TabFragment.VedioFragment;
+import com.example.suryanarayan.sample.Fragment.TabFragment.Vedio_Fragment;
 import com.example.suryanarayan.sample.R;
 
 import java.util.ArrayList;
@@ -79,6 +87,7 @@ public class ServiceRequest extends Fragment {
             }
         });
         setupViewPager(viewPager);
+
     }
 
 
@@ -86,7 +95,7 @@ public class ServiceRequest extends Fragment {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
         adapter.addFragment(new ImageFragment(), "Image");
         adapter.addFragment(new AudioFragment(), "Audio");
-        adapter.addFragment(new VedioFragment(), "Video");
+        adapter.addFragment(new Vedio_Fragment(), "Video");
         viewPager.setAdapter(adapter);
     }
 
@@ -154,6 +163,14 @@ public class ServiceRequest extends Fragment {
             return mFragmentTitleList.get(position);
         }
     }
+
+
+
+
+
+
+
+
 
     private void InitilizeFloating()
     {

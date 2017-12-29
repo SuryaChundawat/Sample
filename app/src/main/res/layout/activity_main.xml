@@ -52,7 +52,7 @@
         android:layout_gravity="left"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_headerlayout"
-        app:itemTextColor="@android:color/darker_gray"
+        app:itemTextColor="@color/colorPrimary"
         tools:ignore="RtlHardcoded">
 
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview"
+        android:elevation="4dp"
+        tools:ignore="HardcodedText"
+         />
+
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|end"
+        android:id="@+id/fabmenu"
+        android:elevation="4dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        fab:menu_colorNormal="@color/orange_dark"
+        fab:menu_colorPressed="@color/orange_dark"
+        fab:menu_colorRipple="@color/orange_dark"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_icon="@mipmap/filters"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:menu_labels_position="left"
+
+
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/video"
+            fab:fab_size="normal"
+            fab:backgroundTintMode="multiply"
+            android:id="@+id/fabvedio"
+            fab:fab_label="Request Video"
+            fab:rippleColor="@color/orange_dark"
+            style="@style/MenuButtonsSmall"/>
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search"
+            android:id="@+id/fabsearch"
+            fab:fab_size="normal"
+            fab:fab_label="Search"
+            fab:backgroundTintMode="multiply"
+            fab:rippleColor="@color/orange_dark"
+            style="@style/MenuButtonsSmall"
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</android.support.design.widget.CoordinatorLayout>

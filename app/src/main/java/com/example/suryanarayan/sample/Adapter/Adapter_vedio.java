@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.suryanarayan.sample.Activity.AudioDetails;
@@ -28,6 +29,8 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import static java.util.Collections.addAll;
+
 /**
  * Created by surya.narayan on 12/19/2017.
  */
@@ -37,13 +40,10 @@ public class Adapter_vedio extends RecyclerView.Adapter<Adapter_vedio.MyViewHold
     private ArrayList<VedioParameter> imageParametersList;
     private Context context;
     private Gson gson;
-    private int id;
     private Layout layout;
 
-    public Adapter_vedio(ArrayList<VedioParameter> imageParametersList, Context context,int id) {
+    public Adapter_vedio(ArrayList<VedioParameter> imageParametersList, Context context) {
         this.imageParametersList = imageParametersList;
-        this.id = id;
-
         this.context = context;
     }
 
@@ -69,19 +69,16 @@ public class Adapter_vedio extends RecyclerView.Adapter<Adapter_vedio.MyViewHold
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                        //String ProductList = gson.toJson(imageParametersList);
+                Toast.makeText(context, "Card is clicked", Toast.LENGTH_SHORT).show();
                         Intent intent1 = new Intent(context, VideoDetails.class);
-                        //bundle.putParcelableArrayList("list", list);
                         intent1.putExtra("position", position);
                         ActivityOptionsCompat options1 = ActivityOptionsCompat.
                                 makeSceneTransitionAnimation((Activity) context, holder.txtSolId,"product_video");
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                             context.startActivity(intent1, options1.toBundle());
-                        }else{
+                        } else{
                             context.startActivity(intent1);
                         }
-
             }
         });
     }
@@ -110,5 +107,19 @@ public class Adapter_vedio extends RecyclerView.Adapter<Adapter_vedio.MyViewHold
             imageView = (ImageView) itemView.findViewById(R.id.image);
         }
 
+    }
+
+    public ArrayList<VedioParameter> onSaveInstanceState(){
+        int size = getItemCount();
+        ArrayList<VedioParameter> items = new ArrayList<VedioParameter>(size);
+        for(int i=0;i<size;i++){
+            items.add(imageParametersList.get(i));
+        }
+        return items;
+    }
+
+    public void onRestoreInstanceState(ArrayList<VedioParameter> items) {
+        //clear();
+        addAll(items);
     }
 }

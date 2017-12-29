@@ -17,11 +17,40 @@ public class ImageParameter implements Parcelable
     private String strSoiId;
     private String strDateTime;
 
-    public ImageParameter(String strCameraPath, String strDateTime, String strImagepath) {
+
+
+    private String strLocation;
+
+    public ImageParameter(String strCameraPath, String strDateTime, String strImagepath,String strSolId,String strTime,String strLocation) {
         this.strCameraPath = strCameraPath;
         this.strDateTime = strDateTime;
         this.strImagepath = strImagepath;
+        this.strSoiId = strSolId;
+        this.strTime = strTime;
+        this.strLocation = strLocation;
     }
+
+
+    protected ImageParameter(Parcel in) {
+        strCameraPath = in.readString();
+        strDateTime = in.readString();
+        strImagepath = in.readString();
+        strSoiId = in.readString();
+        strTime = in.readString();
+        strLocation = in.readString();
+    }
+
+    public static final Creator<ImageParameter> CREATOR = new Creator<ImageParameter>() {
+        @Override
+        public ImageParameter createFromParcel(Parcel in) {
+            return new ImageParameter(in);
+        }
+
+        @Override
+        public ImageParameter[] newArray(int size) {
+            return new ImageParameter[size];
+        }
+    };
 
     public String getStrImagepath() {
         return strImagepath;
@@ -62,6 +91,13 @@ public class ImageParameter implements Parcelable
     public void setStrDateTime(String strDateTime) {
         this.strDateTime = strDateTime;
     }
+    public String getStrLocation() {
+        return strLocation;
+    }
+
+    public void setStrLocation(String strLocation) {
+        this.strLocation = strLocation;
+    }
 
     @Override
     public int describeContents() {
@@ -70,10 +106,11 @@ public class ImageParameter implements Parcelable
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(strImagepath);
         dest.writeString(strCameraPath);
-        dest.writeString(strTime);
-        dest.writeString(strSoiId);
         dest.writeString(strDateTime);
+        dest.writeString(strImagepath);
+        dest.writeString(strSoiId);
+        dest.writeString(strTime);
+        dest.writeString(strLocation);
     }
 }
