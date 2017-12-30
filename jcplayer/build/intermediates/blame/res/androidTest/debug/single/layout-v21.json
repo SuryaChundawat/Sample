@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_play.xml",
+        "source": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\bundles\\debug\\res\\layout-v21\\notification_play.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_pause.xml",
+        "source": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\bundles\\debug\\res\\layout-v21\\notification_pause.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\layout-v21\\notification_template_custom_big.xml"
+    }
+]

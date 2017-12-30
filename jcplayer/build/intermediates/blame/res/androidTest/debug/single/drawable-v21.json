@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.0.1.aar\\b4881a7912dde98aa9df7b493b4a6dcf\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\drawable-v21\\abc_edit_text_material.xml"
+    }
+]

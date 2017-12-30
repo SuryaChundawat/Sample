@@ -1,0 +1,49 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v13\\values-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\values-v13\\values-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v13\\values-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\values-v13\\values-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Sample\\Sample\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v13\\values-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\values-v13\\values-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        }
+    ]
+}

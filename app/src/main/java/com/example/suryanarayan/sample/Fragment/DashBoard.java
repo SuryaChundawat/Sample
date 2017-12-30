@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.suryanarayan.sample.Activity.ActivityCalender;
 import com.example.suryanarayan.sample.Adapter.Adapter_ParamterAlert;
 import com.example.suryanarayan.sample.Https.ApiResponse;
 import com.example.suryanarayan.sample.Https.PostApi;
@@ -283,6 +284,11 @@ public class DashBoard extends Fragment implements ApiResponse,View.OnClickListe
             listview.setLayoutManager(mLayoutManager);
             listview.setItemAnimator(new DefaultItemAnimator());
             listview.setAdapter(productAdapter);
+
+        }
+
+        if (v == fab) {
+            ActivityCalender.StartActivity(context);
 
         }
 

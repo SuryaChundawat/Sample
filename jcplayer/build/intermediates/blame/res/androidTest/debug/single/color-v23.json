@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.0.1.aar\\b4881a7912dde98aa9df7b493b4a6dcf\\res\\color-v23\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_tint_default.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "D:\\SuryaChundawat\\JcPlayer-master\\jcplayer\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\surya.narayan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.0.1.aar\\07d2473157781f51fd4fc3a66dc86574\\res\\color-v23\\abc_tint_spinner.xml"
+    }
+]

@@ -46,4 +46,15 @@
 
 
 
+    <!--<<<<<<<<<<Calender activity>>>>>>>>>>>-->
+    <!-- MENU -->
+    <string name="select_all_fridays">Select All Fridays</string>
+    <string name="unselect_all_fridays">Unselect All Fridays</string>
+    <string name="select_three_months">Select Prev/Curr/Next Months</string>
+    <string name="unselect_three_months">Unselect Prev/Curr/Next Months</string>
+    <string name="clear_selections">Clear selections</string>
+    <string name="log_selected_days">Log selected days</string>
+
+
+
 </resources>
